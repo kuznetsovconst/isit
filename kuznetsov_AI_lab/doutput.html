@@ -83,14 +83,248 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <img src="img/ma.jpg" alt="" class="img-circle">
-                        <p class="text-muted">Это головный мозг</p>
-                    </div>
-                    <div class="col-md-4">
+                    <div class="col-md-12">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <!-- Первая панель -->
+                            <div class="panel panel-primary">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                      Теоретическая часть
+                                    </a>
+                                  </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                  <div class="panel-body">
+                                    <p class="indent">Рассмотрим пример &laquo;ручного вывода&raquo;,для фрагмента <span class="text-primary" data-toggle="tooltip" data-placement="top" title="База знаний">БЗ</span>, описывающего ситуацию &laquo;Покупка легкового автомобиля&raquo; в виде шести нижеприведенных правил, которые на естественном языке выглядят следующим образом:</p>
 
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <table class="table table-hover">
+                                                <tr>
+                                                    <td>
+                                                       <p class="indent-2">П.1. Если у человека много денег и ему удобно ездить на машине, то нужно ехать в автосалон.</p> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                       <p class="indent-2">П.2. Если у человека мало денег и ему нужен автомобиль, то нужно ехать на рынок подержанных автомобилей.</p> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                       <p class="indent-2">П.3. Если есть время и нужно ехать в автосалон, то необходимо определиться с маркой машины.</p> 
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p class="indent-2">П.4. Если есть время и нужно ехать на авторынок, то необходимо определиться с пробегом покупаемой машины.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p class="indent-2">П.5. Если человек приехал в автосалон и определился с маркой, то нужно произвести покупку нового автомобиля.</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                         <p class="indent-2">П.6. Если человек приехал на авторынок и определился с пробегом, то нужно произвести покупку б/у автомобиля.</p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <p class="indent">Используя упрощенную версию ЯПЗ системы Level5.Object, эти правила представляются в следующем виде.</p>
+
+                                    <div class="row">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <table class="table table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <p class="indent-2"><code>RULE 1</code></p>
+                                                            <p class="indent-2"><code>IF</code> <span class="label label-primary">Много денег</span> <code>= TRUE AND</code> <span class="label label-primary">Удобно ездить на авто</span> <code>= TRUE THEN</code> <span class="label label-primary">Ехать в автосалон</span> <code>:=TRUE</code></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <p class="indent-2"><code>RULE 2</code></p>
+                                                            <p class="indent-2"><code>IF</code> <span class="label label-primary">Мало денег</span> <code>= TRUE AND</code> <span class="label label-primary">Нужен авто</span> <code>= TRUE THEN</code> <span class="label label-primary">ехать на авторынок</span> <code>:=TRUE</code></p> 
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <p class="indent-2"><code>RULE 3</code></p>
+                                                            <p class="indent-2"><code>IF</code> <span class="label label-primary">Есть время</span> <code>= TRUE AND</code> <span class="label label-primary">Ехать на авторынок</span> <code>= TRUE THEN</code> <span class="label label-primary">Определиться с пробегом</span> <code>:=TRUE</code></p> 
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p class="indent-2"><code>RULE 4</code></p>
+                                                            <p class="indent-2"><code>IF</code> <span class="label label-primary">Есть время</span> <code>= TRUE AND</code> <span class="label label-primary">Ехать на авторынок</span> <code>= TRUE THEN</code> <span class="label label-primary">Определиться с пробегом</span> <code>:=TRUE</code></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p class="indent-2"><code>RULE 5</code></p>
+                                                            <p class="indent-2"><code>IF</code> <span class="label label-primary">Ехать в автосалон</span> <code>= TRUE AND</code> <span class="label label-primary">Определится с маркой</span> <code>= TRUE THEN</code> <span class="label label-primary">Покупать новый авто</span> <code>:=TRUE</code></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                           <p class="indent-2"><code>RULE 6</code></p>
+                                                            <p class="indent-2"><code>IF</code> <span class="label label-primary">Ехать на авторынок</span> <code>= TRUE AND</code> <span class="label label-primary">Определится с пробегом</span> <code>= TRUE THEN</code> <span class="label label-primary">Покупать б/у авто</span> <code>:=TRUE</code></p> 
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="indent">Пусть от пользователя СОЗ(ЭС) в систему, т.е. в рабочую память, поступили следующие факты:</p>
+                                    <p class="indent">Начальное состояние РП:</p>
+                                    <ul>
+                                        <li>"Много денег"</li>
+                                        <li>"Удобно ездить на авто"</li>
+                                        <li>"Есть время"</li>
+                                    </ul>
+                                    <p class="indent">Рассмотрим основные шаги алгоритмов прямого и обратного вывода.</p>
+                                    <h4 class="text-center">Прямой вывод</h4>
+                                    <p class="indent">В этом случае необходимо просматривать все правила и выбирать те, у которых выполняются условия, тем самым формируя конфликтное множество. Затем, используя махенизм разрешения конфликтов, выбирать подходящее правило, добавлять его заключение в рабочую память и т.д.</p>
+                                    <p class="indent lead font-lg bg-danger">За один проход можно добавить в РП только один факт.</p>
+                                    
+                                    <p class="text-center"><code><em>F = &lt;N,a<sub>1</sub> b<sub>1</sub> [P<sub>1</sub>], a<sub>2</sub> b<sub>2</sub> [P<sub>2</sub>], ..., a<sub>n</sub> b<sub>n</sub> [P<sub>n</sub>]&gt;</em></code>,</p>
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                            <p class="pull-right">где</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                                <ul>
+                                                    <li><code><em>N</em></code> &mdash; имя фрейма;</li>
+                                                    <li><code><em>a<sub>i</sub></em></code> &mdash; имя <em>i</em>-слота;</li>
+                                                    <li><code><em>b<sub>i</sub></em></code> &mdash; значение <em>i</em>-слота;</li>
+                                                    <li><code><em>[P<sub>i</sub>]</em></code> &mdash; процедура, привязанная к <em>i</em>-слоту (опционально);</li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="indent lead font-lg bg-info">Важно, что в качестве значений слотов могут выступать имена других фреймов, что обеспечивает связь между ними.</p>
+                                            <p class="indent">Обычно выделяют фреймы-<em>прототипы</em>, хранящиеся в <span class="text-primary" data-toggle="tooltip" data-placement="top" title="База знаний">БЗ</span>, и фреймы-<em>экземпляры</em>, которые создаются на основе фреймов-прототипов для отображения конкретных ситуаций на основе поступающих данных.</p>
+                                            <p class="indent">Ниже показан пример фрейма-прототипа для ситуации "сдача экзамена в вузе".</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-md-offset-3">
+                                            <table class="table table-bordered table-hover">
+                                                <caption class="text-uppercase text-center">Сдача экзамена в вузе</caption>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-uppercase">Сдающий</td>
+                                                        <td>(студент, аспирант, абитуриент, группа)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-uppercase">Принимающие</td>
+                                                        <td>(лектор, ассистент, комиссия)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-uppercase">Предмет/Дисциплина</td>
+                                                        <td>(название предмета/дисциплины)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-uppercase">Результат</td>
+                                                        <td>(оценка, баллы)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-uppercase">Место/Время</td>
+                                                        <td>(расписание сессии)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="indent">Комментируя этот пример, можно указать на&nbsp;важнейшее свойство фреймов, связанное с&nbsp;тем, что удаление из&nbsp;этого описания любого <span class="text-primary" data-toggle="tooltip" data-placement="top" title="роль">актанта</span> приводит к&nbsp;потере свойств, определющих суть данного явления&nbsp;&mdash; сдача экзамена в&nbsp;вузе.</p>
+                                            <p class="indent">Другая сильная сторона фреймов заключается в&nbsp;возможности включения в&nbsp;слоты фрейма различных предположений и&nbsp;ожиданий, что позволяет моделировать ситуации, в&nbsp;которых отсутствует упоминание о&nbsp;различных деталях (например, широкое использование <em>по&nbsp;умолчанию</em> некоторых стандартных для ситуации значений и&nbsp;т.&nbsp;п.)</p>
+                                            <p class="indent">Фреймы легко организуются в&nbsp;<span class="text-primary" data-toggle="tooltip" data-placement="top" title="без учета имен слотов при отсылке к другим фреймам">однородные</span> и&nbsp;<span class="text-primary" data-toggle="tooltip" data-placement="top" title="c учетом имен слотов при отсылке к другим фреймам">неоднородные</span> сети фреймов, что позволяет многим специалистам в&nbsp;области&nbsp;<span class="text-primary" data-toggle="tooltip" data-placement="top" title="Искусственный интеллект">ИИ</span> считать фреймы частым видом специально организованных семантических сетей.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="pull-right text-muted"><em>Источник: Основы построения интеллектуальных систем. Г.В. Рыбина</em></p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <!-- Вторая панель -->
+                            <div class="panel panel-success">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                  <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                                      Практическая часть
+                                    </a>
+                                  </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                  <div class="panel-body">
+                                    <!-- Сценарий лабораторной работы -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4 class="text-center">Введение</h4>
+                                            <p class="indent">В новой версии программы для разрешения конфликтов были применены коэфициенты определенности <span class="text-primary" data-toggle="tooltip" data-placement="top" title="ПЧП">правой части правила</span>.</p>
+                                            <p class="indent lead font-lg bg-danger">Все конфликтные ситуации разрешаются путем выбора <span class="text-primary" data-toggle="tooltip" data-placement="top" title="подцели">правила</span> с наибольшим коэффициентом определенности.</p>
+                                            <p class="indent">Для прохождения тестирования у вас будет <strong>ограниченное время</strong>:
+                                                <ul>
+                                                    <li>Прямой вывод - 7 минут</li>
+                                                    <li>Обратный вывод - 8 минут</li>
+                                                </ul>
+                                            </p>
+                                            <p class="indent">В правом верхнем углу всегда отображается справочная информация, которая будет исключать «в корне» неправильные действия.</p>
+                                            <p class="indent">При прохождении прямого вывода у вас будет возможность редактирования и удаления шагов с трассы вывода, а при прохождении обратного вывода только удаление.</p>
+                                            <p class="indent">Если у вас возник <span class="text-primary" data-toggle="tooltip" data-placement="top" title="неравенство коэффициентов">конфилкт коэффициентов</span>, то нужно выбрать тот, чей номер правила меньший.</p>
+                                            <h4 class="text-center">Сценарий лабораторной работы</h4>
+                                            <p class="indent">Первое, что вам необходимо сделать – авторизоваться <strong>по вашим</strong> логинам и паролям, которые вам предоставят инженеры кафедры.</p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/auth_po.png"></p>
+                                            <p class="indent">После авторизации, вы получаете доступ к панели управления в режиме <span class="text-primary" data-toggle="tooltip" data-placement="top" title="режим реального времени">RunTime</span>.</p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/po.png"></p>
+                                            <p class="indent">Далее, вам надо нажать на ссылку <span class="label label-default">Прямой вывод</span> или <span class="label label-default">Обратный вывод</span>. Вам откроется таблица с вашими результатами.</p>
+                                            <p class="indent">Далее нажимаете на ссылку <span class="label label-default">Пройти тестирование</span> и проходите тестирование выбранного вами вывода.</p>
+                                            <h4 class="text-center">Прохождение прямого вывода</h4>
+                                            <p class="indent">При запуске тестирования ваша база сохранится на сервере, и вам откроется окно <span class="label label-primary">Выбор начального состояния</span>.</p>
+                                            <p class="indent lead font-lg bg-danger">Также предупреждаем, что попытка прохождения тестирования после начала прохождения исчерпается.</p>
+                                            <p class="indent">В окне вам нужно указать факты, которые должны быть в начальной <span class="text-primary" data-toggle="tooltip" data-placement="top" title="рабочей памяти">РП</span>. Указывать их нужно обоснованно. То есть вы должны указывать факты, которые находятся на <span class="text-primary" data-toggle="tooltip" data-placement="top" title="первая колонка слева">самом нижнем уровне</span>.</p>
+                                            <p class="indent">При неправильных действиях, по выбору начальной РП в правом углу будут появлятся уведомления и методы решения проблемы.</p>
+                                            <p class="indent">При успехе данного этапа у вас появится примерно такая картина (здесь в <span class="text-primary" data-toggle="tooltip" data-placement="top" title="рабочая память">РП</span> добавили 4 факта <code>Q,R,S,T</code>) (старая версия программы, в новой у вас откроется ваша модель, с указанием коэффициентов определенности <span class="text-primary" data-toggle="tooltip" data-placement="top" title="правая часть правила">ПЧП</span>)</p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/po1.png">сюда нужны НОВЫЕ скриншоты</p>
+                                            <p class="indent">Далее вы должны выбирать правила, которые <span class="text-primary" data-toggle="tooltip" data-placement="top" title="наличие всех фактов в зеленом фоне слева">могут сработать</span>. Для данного примера это например правило <code>R1</code></p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/po2.png">сюда нужны НОВЫЕ скриншоты с выбранным правилом R1</p>
+                                            <p class="indent">Для того, чтобы выбрать правило нажмите на желтый круг для данного правила, вам откроется окно изменения состояния. При срабатывании правила вам нужно будет указать изменения в <span class="text-primary" data-toggle="tooltip" data-placement="top" title="рабочая память">РП</span>, для данного случая(срабатывание правила <code>R1</code>) это будет факт <code>J</code>, поэтому мы его указываем:</p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/po3.png">сюда нужны НОВЫЕ скриншоты</p>
+                                            <p class="indent">Также в данном окне вам необходимо выбрать состояние правил. Поскольку это первый проход у нас будет подходить только первое правило, остальные не подходят. Нажимаете на кнопку <span class="label label-default">Готово</span>.</p>
+                                            <p class="indent lead font-lg bg-danger">В вашей версии программы с приминением коэффициентов определенности нужно выбирать не любое правило, а то, которое может сработать в данный момент и имеет <strong>наибольший</strong> коэффициент определенности <span class="text-primary" data-toggle="tooltip" data-placement="top" title="правая часть правила">ПЧП</span>. Учитываются <strong>все правила</strong> дерева.</p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/po4.png">сюда нужны НОВЫЕ скриншоты</p>
+                                            <p class="indent">Ваш шаг отобразится на трассе вывода.</p>
+                                            <p class="indent">Далее проходите все шаги прямого метода, затем нажимаете оценить. Вам покажется ваша оценка. Затем переходите в панель управления для прохождения обратного вывода.</p>
+                                            <p class="indent lead font-lg bg-danger">При шагах > 1 не забывайте, что правила, которые на данный момент были выполненны, должны иметь состояние «уже используется».</p>
+                                            <h4 class="text-center">Будьте внимательны, и&nbsp;удачи!</h4>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1 col-md-offset-9">
+                        <a href="index.html" class="btn btn-primary pull-right">На главную</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#menu-toggle" class="btn btn-primary pull-right" id="menu-toggle-2">Активировать панель</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,14 +338,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+    <script src="js/tooltip.js" ></script>
+    <script src="js/site.js"></script>
 
 </body>
 
