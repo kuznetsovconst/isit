@@ -72,7 +72,7 @@
                         <blockquote><h1>Прямой вывод</h1></blockquote>
                         <div class="jumbotron">
                             <h3 class="aling-center">Уважаемые студенты!</h3>
-                            <p class="lead text-center">Здесь собраны методические указания для успешного выполнения лабораторных заданий по теме прямой вывод в Научной лаборатории ИСиТ НИЯУ МИФИ.</p>
+                            <p class="lead text-center">Здесь собраны методические указания для успешного выполнения лабораторных заданий по теме <strong>прямой вывод</strong> в Научной лаборатории ИСиТ НИЯУ МИФИ.</p>
                             <div class="row no-margin">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-3"></div>
@@ -94,7 +94,7 @@
                                     </a>
                                   </h4>
                                 </div>
-                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                   <div class="panel-body">
                                     <p class="indent">Рассмотрим пример &laquo;ручного вывода&raquo;,для фрагмента <span class="text-primary" data-toggle="tooltip" data-placement="top" title="База знаний">БЗ</span>, описывающего ситуацию &laquo;Покупка легкового автомобиля&raquo; в виде шести нижеприведенных правил, которые на естественном языке выглядят следующим образом:</p>
 
@@ -193,52 +193,168 @@
                                     <h4 class="text-center">Прямой вывод</h4>
                                     <p class="indent">В этом случае необходимо просматривать все правила и выбирать те, у которых выполняются условия, тем самым формируя конфликтное множество. Затем, используя махенизм разрешения конфликтов, выбирать подходящее правило, добавлять его заключение в рабочую память и т.д.</p>
                                     <p class="indent lead font-lg bg-danger">За один проход можно добавить в РП только один факт.</p>
-                                    
-                                    <p class="text-center"><code><em>F = &lt;N,a<sub>1</sub> b<sub>1</sub> [P<sub>1</sub>], a<sub>2</sub> b<sub>2</sub> [P<sub>2</sub>], ..., a<sub>n</sub> b<sub>n</sub> [P<sub>n</sub>]&gt;</em></code>,</p>
                                     <div class="row">
-                                        <div class="col-md-1">
-                                            <p class="pull-right">где</p>
+                                        <div class="col-md-5 col-md-offset-1">
+                                            <p><span class="label label-primary">Проход 1.</span> Осуществляется просмотр правил, ищется то, у которого выполняются все условия. После того как такое правило найдено, факт из его правой части, добавляетя в рабочую память, затем просматриваются все остальные правила, но со старой РП.</p>
+                                           
                                         </div>
-                                        <div class="col-md-4">
-                                                <ul>
-                                                    <li><code><em>N</em></code> &mdash; имя фрейма;</li>
-                                                    <li><code><em>a<sub>i</sub></em></code> &mdash; имя <em>i</em>-слота;</li>
-                                                    <li><code><em>b<sub>i</sub></em></code> &mdash; значение <em>i</em>-слота;</li>
-                                                    <li><code><em>[P<sub>i</sub>]</em></code> &mdash; процедура, привязанная к <em>i</em>-слоту (опционально);</li>
-                                                </ul>
+                                        <div class="col-md-5">
+                                            <p><span class="label label-primary">Проход 2.</span> Выполняется аналогично первому, но с учетом того, что некоторые правила уже сработали, поэтому они пропускаются</p>
+
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <p class="indent lead font-lg bg-info">Важно, что в качестве значений слотов могут выступать имена других фреймов, что обеспечивает связь между ними.</p>
-                                            <p class="indent">Обычно выделяют фреймы-<em>прототипы</em>, хранящиеся в <span class="text-primary" data-toggle="tooltip" data-placement="top" title="База знаний">БЗ</span>, и фреймы-<em>экземпляры</em>, которые создаются на основе фреймов-прототипов для отображения конкретных ситуаций на основе поступающих данных.</p>
-                                            <p class="indent">Ниже показан пример фрейма-прототипа для ситуации "сдача экзамена в вузе".</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 col-md-offset-3">
-                                            <table class="table table-bordered table-hover">
-                                                <caption class="text-uppercase text-center">Сдача экзамена в вузе</caption>
+                                        <div class="col-md-5 col-md-offset-1">
+                                             <table class="table table-hover">
                                                 <tbody>
                                                     <tr>
-                                                        <td class="text-uppercase">Сдающий</td>
-                                                        <td>(студент, аспирант, абитуриент, группа)</td>
+                                                        <td>
+                                                            <code>RULE 1</code> - подходит (в рабочую память добавляется новый факт "Ехать в автосалон")
+                                                        </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-uppercase">Принимающие</td>
-                                                        <td>(лектор, ассистент, комиссия)</td>
+                                                        <td>
+                                                            <code>RULE 2</code> - не подходит
+                                                        </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-uppercase">Предмет/Дисциплина</td>
-                                                        <td>(название предмета/дисциплины)</td>
+                                                        <td>
+                                                            <code>RULE 3</code> - не подходит
+                                                        </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-uppercase">Результат</td>
-                                                        <td>(оценка, баллы)</td>
+                                                        <td>
+                                                            <code>RULE 4</code> - не подходит
+                                                        </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="text-uppercase">Место/Время</td>
-                                                        <td>(расписание сессии)</td>
+                                                        <td>
+                                                            <code>RULE 5</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 6</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div>
+                                        <div class="col-md-5">
+                                            <table class="table table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 1</code> - не подходит или уже сработало
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 2</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 3</code> - подходит (в РП добавляется новый факт "Определиться с маркой")
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 4</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 5</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 6</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5 col-md-offset-1">
+                                            <p>span class="label label-primary">Проход 3.</span> Выполняется аналогично второму.</p>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <p>span class="label label-primary">Проход 4.</span> Необходимо выполнить ещё один проход, чтобы показать, что ни одно правило не сработает.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5 col-md-offset-1">
+                                            <table class="table table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 1</code> - не подходит или уже сработало
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 2</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 3</code> - не подходит или уже сработало
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 4</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 5</code> - подходит  (в рабочую память добавляется новый факт "Покупать новый авто")
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 6</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <table class="table table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 1</code> - не подходит или уже сработало
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 2</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 3</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 4</code> - не подходит
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 5</code> - не подходит или уже сработало
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <code>RULE 6</code> - не подходит
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -246,11 +362,10 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <p class="indent">Комментируя этот пример, можно указать на&nbsp;важнейшее свойство фреймов, связанное с&nbsp;тем, что удаление из&nbsp;этого описания любого <span class="text-primary" data-toggle="tooltip" data-placement="top" title="роль">актанта</span> приводит к&nbsp;потере свойств, определющих суть данного явления&nbsp;&mdash; сдача экзамена в&nbsp;вузе.</p>
-                                            <p class="indent">Другая сильная сторона фреймов заключается в&nbsp;возможности включения в&nbsp;слоты фрейма различных предположений и&nbsp;ожиданий, что позволяет моделировать ситуации, в&nbsp;которых отсутствует упоминание о&nbsp;различных деталях (например, широкое использование <em>по&nbsp;умолчанию</em> некоторых стандартных для ситуации значений и&nbsp;т.&nbsp;п.)</p>
-                                            <p class="indent">Фреймы легко организуются в&nbsp;<span class="text-primary" data-toggle="tooltip" data-placement="top" title="без учета имен слотов при отсылке к другим фреймам">однородные</span> и&nbsp;<span class="text-primary" data-toggle="tooltip" data-placement="top" title="c учетом имен слотов при отсылке к другим фреймам">неоднородные</span> сети фреймов, что позволяет многим специалистам в&nbsp;области&nbsp;<span class="text-primary" data-toggle="tooltip" data-placement="top" title="Искусственный интеллект">ИИ</span> считать фреймы частым видом специально организованных семантических сетей.</p>
+                                            <p class="indent">Таким образом, получена рекомендация системы: "Покупать новый авто"</p>
                                         </div>
                                     </div>
+                                    
                                     <div class="row">
                                         <div class="col-md-12">
                                             <p class="pull-right text-muted"><em>Источник: Основы построения интеллектуальных систем. Г.В. Рыбина</em></p>
@@ -268,7 +383,7 @@
                                     </a>
                                   </h4>
                                 </div>
-                                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                   <div class="panel-body">
                                     <!-- Сценарий лабораторной работы -->
                                     <div class="row">
