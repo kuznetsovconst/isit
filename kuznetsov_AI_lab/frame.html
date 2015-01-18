@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Методические материалы по практическим работам - Фреймы</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        Компоненты
+                    </a>
+                </li>
+                <li>
+                    <a href="doutput.html">Прямой вывод</a>
+                </li>
+                <li>
+                    <a href="rdoutput.html">Обратный вывод</a>
+                </li>
+                <li>
+                    <a href="network.html">Семантические сети</a>
+                </li>
+                <li>
+                    <a href="frame.html">Фреймы</a>
+                </li>
+                <li>
+                    <a href="lingvo.html">Компоненты ЛП</a>
+                </li>
+                <li>
+                    <a href="utz.html">УТЗ</a>
+                </li>
+                <li>
+                    <a href="psycho.html">Психотесты</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <blockquote><h1>Сетевые модели представления знаний: фреймы</h1></blockquote>
+                        <div class="jumbotron">
+                            <h3 class="aling-center">Уважаемые студенты!</h3>
+                            <p class="lead text-center">Здесь собраны методические указания для успешного выполнения лабораторных заданий по теме фреймы в Научной лаборатории ИСиТ НИЯУ МИФИ.</p>
+                            <div class="row no-margin">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-3"><a href="#menu-toggle" class="btn btn-primary pull-right" id="menu-toggle">Активировать панель</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- <h3><span class="label label-primary">Теория</span></h3> -->
+                        <div class="panel panel-primary">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Теоретическая часть
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                              <div class="panel-body">
+                                <p class="indent">Термин &laquo;фрейм&raquo;, который в&nbsp;ранних работах по&nbsp;ИИ переводился как &laquo;скелет&raquo;, &laquo;ситуационная рамка&raquo;, &laquo;каркас&raquo; и&nbsp;т.д., стал популярным после выхода в&nbsp;свет в&nbsp;начале 1970-х гг. знаменитой работы М.Минского, где фрейм определяется как &laquo;структура данных для отображения стереотипной ситуации&raquo;, т.е. некоторое формализованное знание о&nbsp;стереотипной (стандартной) ситуации ПрО.</p>
+                                <p class="indent">С&nbsp;точки зрения модельного аспекта фрейм&nbsp;&mdash; это сеть, у&nbsp;которой одна часть всегда заполнена, а&nbsp;другая содержит незаполненные подструктуры-слоты. Иными словами, фиксируются постоянные имена актантов (ролей) ситуации, описываемой фреймом,&nbsp;&mdash; это имена слотов (подструктур фрейма), а&nbsp;значения слотов определяются в&nbsp;зависимости от&nbsp;выполнения условий/требований к&nbsp;каждому актанту ситуации.</p>
+                                <p class="indent">Эти условия могутбыть заданы самым разнообразным способом, включая использование привязанных процедур, умолчаний, имен других фреймов, множественных ссылок и&nbsp;т.д. Во&nbsp;фреймах допускается рекурсивное фложение слотов друг в&nbsp;друга, что может пораждать иерархическую структуру взаимосвязанных слотов и&nbsp;фреймов.</p>
+                                <p class="indent">В&nbsp;общем случае, используя теоретико-множественное представление, фрейм <code>(F)</code> может быть описан в&nbsp;виде следующей конструкции:</p>
+                                <p class="text-center"><code>F = &lt;N,a1 b1 [P1], a2 b2 [P2], ..., an bn [Pn]&gt;</code>,</p>
+                                <blockquote class="blockquote-reverse">
+                                  
+                                  <footer>Источник: <p class="text-uppercase">Основы построения интеллектуальных систем,</p> <cite title="Автор">Рыбина Г.В.</cite></footer>
+                                </blockquote>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
