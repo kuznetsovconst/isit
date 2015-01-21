@@ -96,6 +96,40 @@
                                     <p class="indent">Понятие семантической сетибыло впервые введено М. Куиллианом в конце 1960-х гг. и с тех пор активно используется в ИИ. Прибольшом разноорбразии трактовок и определений суть это модели остается неизменной - под семантической сетью понимается <em>неоднородная сеть</em>, т.е. сеть с различными типами вершин и различными типами помеченных дуг.</p>
 
                                     <div class="row">
+                                        <div class="col-md-8 col-md-offset-2">
+                                             <table class="table table-striped table-bordered">
+                                                <caption class="text-center">Перечень упрощенных семантико-синтаксических связей</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Тип связи</th>
+                                                        <th>Разновидность связи и&nbsp;ее&nbsp;обозначение</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Глубинный падеж (семантическая валентность)</td>
+                                                        <td>
+                                                        <code>A</code> &mdash;&nbsp;быть &laquo;агентом&raquo; действия<br>
+                                                        <code>O</code> &mdash;&nbsp;быть &laquo;объектом&raquo; действия<br>
+                                                        <code>D</code> &mdash;&nbsp;быть &laquo;адресатом&raquo; действия<br>
+                                                        <code>T</code> &mdash;&nbsp;быть &laquo;темой&raquo; действия<br>
+                                                        <code>I</code> &mdash;&nbsp;быть &laquo;инструментом&raquo; действия<br>
+                                                        <code>L</code> &mdash;&nbsp;быть &laquo;местом&raquo; действия<br>
+                                                        <code>S</code> &mdash;&nbsp;быть &laquo;начальной точкой&raquo; действия<br>
+                                                        <code>F</code> &mdash;&nbsp;быть &laquo;конечной точкой&raquo; действия<br>
+                                                        <code>G</code> &mdash;&nbsp;быть &laquo;целью&raquo; действия<br>
+                                                        <code>C</code> &mdash;&nbsp;быть &laquo;условием&raquo; действия<br>
+                                                        <code>W</code> &mdash;&nbsp;быть &laquo;временем&raquo; действия<br>
+                                                        <code>M</code> &mdash;&nbsp;быть &laquo;способом&raquo; действия<br>
+                                                        <code>B</code> &mdash;&nbsp;быть &laquo;сроком&raquo; действия<br>
+                                                        <code>X</code> &mdash;&nbsp;быть &laquo;количеством&raquo; действия<br>
+                                                        <code>R</code> &mdash;&nbsp;быть &laquo;результатом&raquo; действия<br>
+                                                        <code>K</code> &mdash;&nbsp;быть &laquo;контрагентом&raquo; действия<br>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                         <div class="col-md-12">
                                             <p class="pull-right text-muted"><em>Источник: Рыбина Г.В. Основы построения интеллектуальных систем. Учебное пособие. – М.: Финансы и статистика; ИНФРА‑М, 2010. – 432с.</em></p>
                                         </div>
@@ -118,41 +152,21 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <h4 class="text-center">Введение</h4>
-                                            <p class="indent">В новой версии программы для разрешения конфликтов были применены коэфициенты определенности <span class="text-primary" data-toggle="tooltip" data-placement="top" title="ПЧП">правой части правила</span>.</p>
-                                            <p class="indent lead font-lg bg-danger">Все конфликтные ситуации разрешаются путем выбора <span class="text-primary" data-toggle="tooltip" data-placement="top" title="подцели">правила</span> с наибольшим коэффициентом определенности.</p>
-                                            <p class="indent">Для прохождения тестирования у вас будет <strong>ограниченное время</strong>:
-                                                <ul>
-                                                    <li>Прямой вывод - 7 минут</li>
-                                                    <li>Обратный вывод - 8 минут</li>
-                                                </ul>
-                                            </p>
-                                            <p class="indent">В правом верхнем углу всегда отображается справочная информация, которая будет исключать «в корне» неправильные действия.</p>
-                                            <p class="indent">При прохождении прямого вывода у вас будет возможность редактирования и удаления шагов с трассы вывода, а при прохождении обратного вывода только удаление.</p>
-                                            <p class="indent">Если у вас возник <span class="text-primary" data-toggle="tooltip" data-placement="top" title="неравенство коэффициентов">конфилкт коэффициентов</span>, то нужно выбрать тот, чей номер правила меньший.</p>
-                                            <h4 class="text-center">Сценарий лабораторной работы</h4>
-                                            <p class="indent">Первое, что вам необходимо сделать – авторизоваться <strong>по вашим</strong> логинам и паролям, которые вам предоставят инженеры кафедры.</p>
-                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/auth_po.png"></p>
-                                            <p class="indent">После авторизации, вы получаете доступ к панели управления в режиме <span class="text-primary" data-toggle="tooltip" data-placement="top" title="режим реального времени">RunTime</span>.</p>
-                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/po.png"></p>
-                                            <p class="indent">Далее, вам надо нажать на ссылку <span class="label label-default">Прямой вывод</span> или <span class="label label-default">Обратный вывод</span>. Вам откроется таблица с вашими результатами.</p>
-                                            <p class="indent">Далее нажимаете на ссылку <span class="label label-default">Пройти тестирование</span> и проходите тестирование выбранного вами вывода.</p>
-                                            <h4 class="text-center">Прохождение прямого вывода</h4>
-                                            <p class="indent">При запуске тестирования ваша база сохранится на сервере, и вам откроется окно <span class="label label-primary">Выбор начального состояния</span>.</p>
-                                            <p class="indent lead font-lg bg-danger">Также предупреждаем, что попытка прохождения тестирования после начала прохождения исчерпается.</p>
-                                            <p class="indent">В окне вам нужно указать факты, которые должны быть в начальной <span class="text-primary" data-toggle="tooltip" data-placement="top" title="рабочей памяти">РП</span>. Указывать их нужно обоснованно. То есть вы должны указывать факты, которые находятся на <span class="text-primary" data-toggle="tooltip" data-placement="top" title="первая колонка слева">самом нижнем уровне</span>.</p>
-                                            <p class="indent">При неправильных действиях, по выбору начальной РП в правом углу будут появлятся уведомления и методы решения проблемы.</p>
-                                            <p class="indent">При успехе данного этапа у вас появится примерно такая картина (здесь в <span class="text-primary" data-toggle="tooltip" data-placement="top" title="рабочая память">РП</span> добавили 4 факта <code>Q,R,S,T</code>) (старая версия программы, в новой у вас откроется ваша модель, с указанием коэффициентов определенности <span class="text-primary" data-toggle="tooltip" data-placement="top" title="правая часть правила">ПЧП</span>)</p>
-                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/po1.png">сюда нужны НОВЫЕ скриншоты</p>
-                                            <p class="indent">Далее вы должны выбирать правила, которые <span class="text-primary" data-toggle="tooltip" data-placement="top" title="наличие всех фактов в зеленом фоне слева">могут сработать</span>. Для данного примера это например правило <code>R1</code></p>
-                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/po2.png">сюда нужны НОВЫЕ скриншоты с выбранным правилом R1</p>
-                                            <p class="indent">Для того, чтобы выбрать правило нажмите на желтый круг для данного правила, вам откроется окно изменения состояния. При срабатывании правила вам нужно будет указать изменения в <span class="text-primary" data-toggle="tooltip" data-placement="top" title="рабочая память">РП</span>, для данного случая(срабатывание правила <code>R1</code>) это будет факт <code>J</code>, поэтому мы его указываем:</p>
-                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/po3.png">сюда нужны НОВЫЕ скриншоты</p>
-                                            <p class="indent">Также в данном окне вам необходимо выбрать состояние правил. Поскольку это первый проход у нас будет подходить только первое правило, остальные не подходят. Нажимаете на кнопку <span class="label label-default">Готово</span>.</p>
-                                            <p class="indent lead font-lg bg-danger">В вашей версии программы с приминением коэффициентов определенности нужно выбирать не любое правило, а то, которое может сработать в данный момент и имеет <strong>наибольший</strong> коэффициент определенности <span class="text-primary" data-toggle="tooltip" data-placement="top" title="правая часть правила">ПЧП</span>. Учитываются <strong>все правила</strong> дерева.</p>
-                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/po4.png">сюда нужны НОВЫЕ скриншоты</p>
-                                            <p class="indent">Ваш шаг отобразится на трассе вывода.</p>
-                                            <p class="indent">Далее проходите все шаги прямого метода, затем нажимаете оценить. Вам покажется ваша оценка. Затем переходите в панель управления для прохождения обратного вывода.</p>
-                                            <p class="indent lead font-lg bg-danger">При шагах > 1 не забывайте, что правила, которые на данный момент были выполненны, должны иметь состояние «уже используется».</p>
+                                            <p class="indent">После авторизации перед вами откроется окно с выбором практических заданий.</p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/ling.png"></p>
+                                            <p class="indent">Выбираем ссылку <span class="label label-default">Семантические сети</span>. Задание будет выбрано случайным образом.</p>
+                                            <p class="indent">После выбора системой задания для вас, перед вами будет окно с вариантом вашего задания.</p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/task_sem_network.png"></p>
+                                            <p class="indent">Перед тем как приступать к заданию, ознакомьтесь с интерфейсом. Обратите внимание на возможные действия выполняемые над вершинами сети, научить создавать связи, после чего приступайте к заданию.</p>
+                                            <p class="indent">Рассмотрим пример вашего задания "Покупка стиральной машины". Прежде всего необходимо выбрать предикат. Для того чтобы выбрать предикат нужно кликнуть на левый квадратик располагаемый внутри вершины.</p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/predic_sem_network.png"></p>
+                                            <p class="indent">Далее можно начинать указывать связи между вершинами.</p>
+                                            <p class="indent lead font-lg bg-danger">Будьте внимательны! Глубинные падежи узказываются <strong>английскими</strong> заглавными буквами.</p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/rel_sem_network.png"></p>
+                                            <p class="indent">После того как выполните задание нужно нажать на кнопку <span class="label label-primary">Готово</span> система сообщит вам ваш результат. Также можно будет нажать на кнопку <span class="label label-primary">Ошибки</span>, чтобы ознакомится с совершенными ошибками, если такие имеются.</p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/panel_sem_network.png"></p>
+                                            <p class="indent lead font-lg bg-danger">Хочется отметить, что не всегда в вашей сети будут задействованы все предоставленные вершины.</p>
+                                            <p class="text-center"><img class="img-thumbnail img-responsive" src="img/doing_sem_network.png"></p>
                                             <h4 class="text-center">Будьте внимательны, и&nbsp;удачи!</h4>
                                         </div>
                                     </div>

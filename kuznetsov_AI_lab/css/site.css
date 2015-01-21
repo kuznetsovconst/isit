@@ -17,10 +17,12 @@
 
 .indent {
 	text-indent: 1.5em;
+	text-align: justify;
 }
 
 .indent-2 {
 	text-indent: 3em;
+	text-align: justify;
 }
 
 .tooltip-inner{
