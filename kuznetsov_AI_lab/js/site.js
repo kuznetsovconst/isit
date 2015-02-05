@@ -11,3 +11,7 @@ $("#menu-toggle-2").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+
+// $( document ).ready(function(){
+// 		CKEDITOR.inline("lol");
+// });
