@@ -62,7 +62,7 @@
 
    editor.ui.addButton( 'InsertPleadTag',
    {
-    label: 'Рас рас',
+    label: 'Разряженный текст',
     command: 'insertPleadTag',
     icon: iconcPath + 'InsertPleadTag.png'
    } );   

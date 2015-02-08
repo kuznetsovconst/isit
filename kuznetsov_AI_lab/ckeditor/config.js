@@ -9,7 +9,7 @@ CKEDITOR.editorConfig = function( config ) {
 
 	 config.allowedContent = true;
 
-	 config.extraPlugins = 'code,bootstrapbg';
+	 config.extraPlugins = 'code,bootstrapbg,bootstraplabel';
 
 	 config.toolbar = [
 		 { name: 'document', groups: [ 'mode', 'document', 'doctools' ], items: [ 'Source', '-', 'Save', 'NewPage', 'Preview' ] },
@@ -26,7 +26,7 @@ CKEDITOR.editorConfig = function( config ) {
 		 { name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize' ] },
 		 { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
 		 { name: 'tools', items: [ 'Maximize', 'ShowBlocks' ] },
-		 { name: 'others', items: [ 'bootstrapBg', 'InsertCodeTag', 'BgLabel', '-', 'InsertPleadTag', 'ToolTips' ] }, //сюда можно добавлять свои кнопки <----
+		 { name: 'others', items: [ 'bootstrapBg', 'InsertCodeTag', 'BgLabel', '-', 'InsertPleadTag', 'ToolTips', 'bootstrapLabel'  ] }, //сюда можно добавлять свои кнопки <----
 		];
 	 // / Filebrowser routes /
 	 //  // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
