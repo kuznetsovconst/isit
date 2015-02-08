@@ -48,3 +48,17 @@ p {
 .btn {
 	text-indent: 0px;
 }
+
+.sidebar-nav li {
+	position: relative;
+}
+
+
+.mm-edit-name-off {
+	position: absolute;
+	text-decoration: underline;
+	color: #337AB7;
+	font-size: 0.7em;
+	right: 25px;
+	top:1px;
+}
