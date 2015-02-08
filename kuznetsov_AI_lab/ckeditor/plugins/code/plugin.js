@@ -57,14 +57,14 @@
    {
     label: 'Обернуть код',
     command: 'insertCodeTag',
-    icon: iconcPath + 'insert_form.png'
+    icon: iconcPath + 'insertCodeTag.png'
    } );
 
    editor.ui.addButton( 'InsertPleadTag',
    {
     label: 'Рас рас',
     command: 'insertPleadTag',
-    icon: iconcPath + 'insert_form.png'
+    icon: iconcPath + 'InsertPleadTag.png'
    } );   
   },
 

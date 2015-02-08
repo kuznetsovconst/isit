@@ -39,6 +39,14 @@
                   for (var this_tag in tags){
                      this.add(tags[this_tag][0], tags[this_tag][1], tags[this_tag][2]);
                   }
+
+                  editor.ui.addButton( 'bootstrapBg',
+                  {
+                   label: 'Обернуть код',
+                   command: 'insertCodeTag',
+                   icon: iconcPath + 'insertCodeTag.png'
+                  } );
+                                 
                },
 
                onClick : function( value )
